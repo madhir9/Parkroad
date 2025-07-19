@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PARKROAD HOCKEY CLUB - Your Local Champions</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sans': ['Inter', 'system-ui', 'sans-serif'],
+            'display': ['Poppins', 'system-ui', 'sans-serif']
+          },
+          colors: {
+            'hockey-green': {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              500: '#22c55e',
+              600: '#16a34a',
+              700: '#15803d',
+              800: '#166534',
+              900: '#14532d'
+            },
+            'hockey-blue': {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Add this in the <head> section, before any other <script> tags -->
+</head>
+<body class="font-sans bg-gray-50">
+
+<!-- Navigation -->
+<nav class="bg-white shadow-lg sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <div class="flex items-center space-x-4">
+        <img src="Main Logo.JPG" alt="ParkRoad Hockey Club Logo" class="h-12 object-contain">
+        <div class="font-display font-bold text-xl text-gray-900">ParkRoad Hockey Club</div>
+      </div>
+      
+      <div class="hidden md:flex space-x-8">
+        <a href="#home" class="text-gray-700 hover:text-hockey-green-600 font-medium transition-colors">Home</a>
+        <a href="#about" class="text-gray-700 hover:text-hockey-green-600 font-medium transition-colors">About</a>
+        <a href="#teams" class="text-gray-700 hover:text-hockey-green-600 font-medium transition-colors">Our Teams</a>
+        <a href="#players" class="text-gray-700 hover:text-hockey-green-600 font-medium transition-colors">Players</a>
+        <a href="#events" class="text-gray-700 hover:text-hockey-green-600 font-medium transition-colors">Events</a>
+        <a href="#contact" class="text-gray-700 hover:text-hockey-green-600 font-medium transition-colors">Contact</a>
+      </div>
+      
+      <button class="bg-red-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-red-700 transition-colors">
+        WELCOME ALL </button>
+      
+      <!-- Mobile menu button -->
+      <div class="md:hidden">
+        <button id="mobile-menu-button" class="text-gray-700">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+    <div class="px-4 py-2 space-y-2">
+      <a href="#home" class="block py-2 text-gray-700 hover:text-hockey-green-600">Home</a>
+      <a href="#about" class="block py-2 text-gray-700 hover:text-hockey-green-600">About</a>
+      <a href="#teams" class="block py-2 text-gray-700 hover:text-hockey-green-600">Our Teams</a>
+      <a href="#players" class="block py-2 text-gray-700 hover:text-hockey-green-600">Players</a>
+      <a href="#events" class="block py-2 text-gray-700 hover:text-hockey-green-600">Events</a>
+      <a href="#contact" class="block py-2 text-gray-700 hover:text-hockey-green-600">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="relative bg-gradient-to-br from-red-600 via-red-700 to-gray-900 text-white overflow-hidden">
+  <div class="absolute inset-0 bg-black/40"></div>
+  <div style="background-image: url('champ 2024.jpg'); background-size: cover; background-position: center; opacity: 0.3;" class="absolute inset-0"></div>
+  
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="space-y-8">
+        <div class="space-y-4">
+          <div class="flex items-center space-x-4 mb-6">
+            <img src="Main Logo.JPG" alt="ParkRoad Hockey Club Logo" class="h-20 object-contain bg-white/10 backdrop-blur-sm rounded-xl p-2">
+            <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-medium">
+              <i class="fas fa-trophy text-yellow-400"></i>
+              <span>Est. 1994 - 30+ Years of Excellence</span>
+            </div>
+          </div>
+          <h1 class="text-5xl lg:text-6xl font-display font-bold leading-tight">
+            PARKROAD<br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600">HOCKEY CLUB</span>
+          </h1>
+          <p class="text-xl lg:text-2xl text-gray-200 font-medium">
+            Your local champions on the field!
+          </p>
+          <p class="text-lg text-gray-300 max-w-xl">
+            Join Kenya's premier field hockey club where passion meets excellence. From grassroots to Super League, we develop champions at every level.
+          </p>
+        </div>
+        
+        <div class="flex flex-col sm:flex-row gap-4">
+          <button class="border-2 border-white text-white hover:bg-white hover:text-hockey-green-800 px-8 py-4 rounded-xl font-semibold text-lg transition-all">
+            <i class="fas fa-play mr-2"></i>
+            Watch Highlights
+          </button>
+        </div>
+        
+        <div class="grid grid-cols-3 gap-8 pt-8 border-t border-white/20">
+          <div class="text-center">
+            <div class="text-3xl font-bold text-yellow-400">3</div>
+            <div class="text-sm text-gray-300">Teams</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-yellow-400">30+</div>
+            <div class="text-sm text-gray-300">Years</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-yellow-400">JKUAT</div>
+            <div class="text-sm text-gray-300">Home Ground</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="relative">
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 space-y-6">
+          <div class="flex items-center space-x-3 mb-4">
+            <img src="Main Logo.JPG" alt="ParkRoad Hockey Club Logo" class="h-10 object-contain">
+            <h3 class="text-2xl font-display font-bold">Latest Match Result</h3>
+          </div>
+          <div class="bg-hockey-green-600 rounded-xl p-6">
+            <div class="text-center">
+              <div class="text-sm text-green-100 mb-2">July 19, 2025</div>
+              <div class="text-2xl font-bold mb-2">ParkRoad Badgers 1 - 1 >ParkRoad Tigers</div>
+              <div class="text-green-100">Draw! </div>
+            </div>
+          </div>
+          
+          <div class="space-y-4">
+            <h4 class="font-semibold text-lg">Upcoming Match</h4>
+            <div class="bg
+              <div class="flex items-center justify-between">
+                <div>
+                  <div class="font-medium">vs Nakuru</div>
+                  <div class="text-sm text-gray-300">July 29, 2025</div>
+                </div>
+                <div class="text-2xl">🥅</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Quick Links -->
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-4 gap-8">
+      <div class="text-center group cursor-pointer">
+        <div class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-red-600 transition-colors p-2">
+          <img src="Main Logo.JPG" alt="ParkRoad Hockey Club Logo" class="w-full h-full object-contain group-hover:brightness-0 group-hover:invert transition-all">
+        </div>
+        <h3 class="font-semibold text-lg mb-2">Join Our Teams</h3>
+        <p class="text-gray-600 text-sm">From beginners to Super League players</p>
+      </div>
+      
+      <div class="text-center group cursor-pointer">
+        <div class="w-16 h-16 bg-hockey-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-hockey-blue-600 transition-colors">
+          <i class="fas fa-calendar text-hockey-blue-600 text-2xl group-hover:text-white"></i>
+        </div>
+        <h3 class="font-semibold text-lg mb-2">Match Schedule</h3>
+        <p class="text-gray-600 text-sm">See our upcoming games and events</p>
+      </div>
+      
+      <div class="text-center group cursor-pointer">
+        <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-yellow-500 transition-colors">
+          <i class="fas fa-graduation-cap text-yellow-600 text-2xl group-hover:text-white"></i>
+        </div>
+        <h3 class="font-semibold text-lg mb-2">Training Programs</h3>
+        <p class="text-gray-600 text-sm">Develop your skills with expert coaching</p>
+      </div>
+      
+      <div class="text-center group cursor-pointer">
+        <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-orange-500 transition-colors">
+          <i class="fas fa-trophy text-orange-600 text-2xl group-hover:text-white"></i>
+        </div>
+        <h3 class="font-semibold text-lg mb-2">Achievements</h3>
+        <p class="text-gray-600 text-sm">Celebrating 30+ years of success</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div class="space-y-8">
+        <div class="space-y-4">
+          <div class="text-red-600 font-semibold">ABOUT US</div>
+          <h2 class="text-4xl lg:text-5xl font-display font-bold text-gray-900">
+            Passionate About <span class="text-red-600">Hockey Excellence</span>
+          </h2>
+          <p class="text-lg text-gray-600 leading-relaxed">
+            Since 1994, ParkRoad Hockey Club has been at the forefront of field hockey development in Kenya. We're not just a club - we're a community united by passion, dedication, and the pursuit of excellence.
+          </p>
+        </div>
+        
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <div class="text-3xl font-bold text-red-600 mb-2">30+</div>
+            <div class="font-medium text-gray-900 mb-1">Years of Heritage</div>
+            <div class="text-sm text-gray-600">Building champions since 1994</div>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <div class="text-3xl font-bold text-hockey-blue-600 mb-2">3</div>
+            <div class="font-medium text-gray-900 mb-1">Competitive Teams</div>
+            <div class="text-sm text-gray-600">Badgers, Tigers & Lions</div>
+          </div>
+        </div>
+        
+        <div class="space-y-4">
+          <div class="flex items-start space-x-4">
+            <div class="w-8 h-8 bg-hockey-green-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <i class="fas fa-check text-white text-sm"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-gray-900 mb-1">Player Development Focus</h4>
+              <p class="text-gray-600">Structured training programs and coaching clinics for all skill levels</p>
+            </div>
+          </div>
+          <div class="flex items-start space-x-4">
+            <div class="w-8 h-8 bg-hockey-green-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <i class="fas fa-check text-white text-sm"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-gray-900 mb-1">Community Engagement</h4>
+              <p class="text-gray-600">Active outreach initiatives and grassroots hockey development</p>
+            </div>
+          </div>
+          <div class="flex items-start space-x-4">
+            <div class="w-8 h-8 bg-hockey-green-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <i class="fas fa-check text-white text-sm"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-gray-900 mb-1">Competitive Excellence</h4>
+              <p class="text-gray-600">Competing at the highest levels while maintaining sportsmanship</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="relative">
+        <div class="grid grid-cols-2 gap-4">
+          <img src="tigers team.jpg">
+          <img src="lions.jpg" alt="Hockey action" class="rounded-xl w-full h-48 object-cover mt-8">
+          <img src="https://public.youware.com/users-website-assets/prod/9da0f6bc-a1ce-45e4-8357-695fbb535b81/04b07f3609014d57af44e95bb535add0.jpg" alt="Team celebration" class="rounded-xl w-full h-48 object-cover -mt-8">
+          <img src="DSC_3021.jpg" alt="Hockey training" class="rounded-xl w-full h-48 object-cover">
+        </div> 
+        <!-- Floating card -->
+        <div class="absolute -bottom-6 -left-6 bg-white rounded-xl p-6 shadow-xl">
+          <div class="flex items-center space-x-4">
+            <img src="Main Logo.JPG" alt="ParkRoad Hockey Club Logo" class="h-14 object-contain">
+            <div>
+              <div class="font-bold text-gray-900">Award Winner</div>
+              <div class="text-sm text-gray-600">League Champions 2025</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Our Teams Section -->
+<section id="teams" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <div class="text-red-600 font-semibold mb-4">OUR TEAMS</div>
+      <h2 class="text-4xl lg:text-5xl font-display font-bold text-gray-900 mb-6">
+        Three Teams, One <span class="text-red-600">Passion</span>
+      </h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        From elite competition to recreational play, we have a place for every hockey enthusiast to grow and thrive.
+      </p>
+    </div>
+    
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Badgers -->
+      <div class="bg-gradient-to-br from-red-600 to-red-700 rounded-2xl p-8 text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+        <div class="relative">
+          <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6">
+            <img src="badgers logo.jpg" alt="Badgers Logo">
+          </div>
+          <h3 class="text-2xl font-bold mb-2">ParkRoad Badgers</h3>
+          <div class="text-green-100 mb-4 font-medium">Super League</div>
+          <p class="text-green-100 mb-6">
+            Our flagship team representing the club at the highest level of competition. Known for skill, discipline, and strong tactical play.
+          </p>
+          <div class="space-y-2">
+            <div class="flex items-center text-sm">
+              <i class="fas fa-user-tie w-4 mr-2"></i>
+              <span>Head Coach: Brian Mwangi</span>
+            </div>
+            <div class="flex items-center text-sm">
+              <i class="fas fa-target w-4 mr-2"></i>
+              <span>Elite competition focus</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Tigers -->
+      <div class="bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl p-8 text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+        <div class="relative">
+          <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6">
+            <img src="tigers logo.jpg" alt="Tigers Logo">
+          </div>
+          <h3 class="text-2xl font-bold mb-2">ParkRoad Tigers</h3>
+          <div class="text-orange-100 mb-4 font-medium">Super League</div>
+          <p class="text-orange-100 mb-6">
+            Development team providing competitive environment for emerging players transitioning to elite-level hockey.
+          </p>
+          <div class="space-y-2">
+            <div class="flex items-center text-sm">
+              <i class="fas fa-user-tie w-4 mr-2"></i>
+              <span>Head Coach: Brian Mwangi</span>
+            </div>
+            <div class="flex items-center text-sm">
+              <i class="fas fa-chart-line w-4 mr-2"></i>
+              <span>Player development focus</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Lions -->
+      <div class="bg-gradient-to-br from-hockey-blue-600 to-hockey-blue-700 rounded-2xl p-8 text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+        <div class="relative">
+          <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6">
+            <img src="lions logo.jpg" alt="Lions Logo">
+          </div>
+          <h3 class="text-2xl font-bold mb-2">ParkRoad Lions</h3>
+          <div class="text-blue-100 mb-4 font-medium">Masters League</div>
+          <p class="text-blue-100 mb-6">
+            Promotes inclusive and recreational hockey, encouraging participation among enthusiasts, alumni, and new players.
+          </p>
+          <div class="space-y-2">
+            <div class="flex items-center text-sm">
+              <i class="fas fa-user-tie w-4 mr-2"></i>
+              <span>Head Coach: Cyrus Kanyi</span>
+            </div>
+            <div class="flex items-center text-sm">
+              <i class="fas fa-users w-4 mr-2"></i>
+              <span>Community engagement</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Players Section -->
+<section id="players" class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <div class="text-hockey-green-600 font-semibold mb-4">OUR PLAYERS</div>
+      <h2 class="text-4xl lg:text-5xl font-display font-bold text-gray-900 mb-6">
+        Meet Our <span class="text-hockey-green-600">Champions</span>
+      </h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        Talented athletes who embody the spirit and excellence of ParkRoad Hockey Club.
+      </p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Badgers Table -->
+      <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-2xl shadow-2xl border-4 border-red-200 hover:scale-105 transition-transform duration-300 overflow-hidden">
+        <h3 class="text-2xl font-extrabold text-center py-5 bg-gradient-to-r from-red-600 to-red-400 text-white tracking-widest shadow">Badgers</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full text-lg">
+            <thead class="bg-red-600 text-white">
+              <tr>
+                <th class="px-4 py-2 text-left font-semibold">Player</th>
+                <th class="px-4 py-2 text-left font-semibold">Position</th>
+                <th class="px-4 py-2 text-left font-semibold">Tshirt Number</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr class="hover:bg-gradient-to-r hover:from-red-100 hover:to-red-300 transition-all font-semibold text-gray-900 text-lg">
+                <td class="px-4 py-3">BRAVEAN SAFARI CHEBON</td>
+                <td class="px-4 py-3">Goalkeeper</td>
+                <td class="px-4 py-3 text-center text-2xl font-extrabold text-red-500 drop-shadow"></td>
+              </tr>
+              <tr class="hover:bg-gradient-to-r hover:from-red-100 hover:to-red-300 transition-all font-semibold text-gray-900 text-lg">
+                <td class="px-4 py-3">VICTOR OPONDO</td>
+                <td class="px-4 py-3">Defender</td>
+                <td class="px-4 py-3 text-center text-2xl font-extrabold text-red-500 drop-shadow">5</td>
+              </tr>
+              <tr class="hover:bg-gradient-to-r hover:from-red-100 hover:to-red-300 transition-all font-semibold text-gray-900 text-lg">
+                <td class="px-4 py-3">DAVID MWAURA</td>
+                <td class="px-4 py-3">Defender</td>
+                <td class="px-4 py-3 text-center text-2xl font-extrabold text-red-500 drop-shadow">21</td>
+              </tr>
+              <tr class="hover:bg-gradient-to-r hover:from-red-100 hover:to-red-300 transition-all font-semibold text-gray-900 text-lg">
+                <td class="px-4 py-3">EULLER NAYOMBE</td>
+                <td class="px-4 py-3">Midfielder</td>
+                <td class="px-4 py-3 text-center text-2xl font-extrabold text-red-500 drop-shadow">10</td>
+              </tr>
+              <tr class="hover:bg-gradient-to-r hover:from-red-100 hover:to-red-300 transition-all font-semibold text-gray-900 text-lg">
+                <td class="px-4 py-3">MATHIAS GULARIRE</td>
+                <td class="px-4 py-3">Midfielder</td>
+                <td class="px-4 py-3 text-center text-2xl font-extrabold text-red-500 drop-shadow">42</td>
+              </tr>
+              <tr class="hover:bg-gradient-to-r hover:from-red-100 hover:to-red-300 transition-all font-semibold text-gray-900 text-lg">
+                <td class="px-4 py-3">LANOX WILSON ONYANGO</td>
+                <td class="px-4 py-3">Midfielder</td>
+                <td class="px-4 py-3 text-center text-2xl font-extrabold text-red-500 drop-shadow">31</td>
+              </tr>
+              <tr class="hover:bg-gradient-to-r hover:from-red-100 hover:to-red-300 transition-all font-semibold text-gray-900 text-lg">
+                <td class="px-4 py-3">EDWIN AGORO</td>
+                <td class="px-4 py-3">Midfielder</td>
+                <td class="px-4 py-3 text-center text-2xl font-extrabold text-red-500 drop-shadow">32</td>
+              </tr>
+              <tr class="hover:bg-gradient-to-r hover:from-red-100 hover:to-red-300 transition-all font-semibold text-gray-900 text-lg">
+                <td class="px-4 py-3">EVASON ALULU</td>
+                <td class="px-4 py-3">Forward</td>
+                <td class="px-4 py-3 text-center text-2xl font-extrabold text-red-500 drop-shadow">23</td>
+              </tr>
+              <tr class="hover:bg-gradient-to-r hover:from-red-100 hover:to-red-300 transition-all font-semibold text-gray-900 text-lg">
+                <td class="px-4 py-3">MOHAMED JATTAN</td>
+                <td class="px-4 py-3">Forward</td>
+                <td class="px-4 py-3 text-center text-2xl font-extrabold text-red-500 drop-shadow">37</td>
+              </tr>
+              <tr class="hover:bg-gradient-to-r hover:from-red-100 hover:to-red-300 transition-all font-semibold text-gray-900 text-lg">
+                <td class="px-4 py-3">FELIX KIPLAGAT</td>
+                <td class="px-4 py-3">Defender</td>
+                <td class="px-4 py-3 text-center text-2xl font-extrabold text-red-500 drop-shadow">24</td>
+              </tr>
+              <tr class="hover:bg-gradient-to-r hover:from-red-100 hover:to-red-300 transition-all font-semibold text-gray-900 text-lg">
+                <td class="px-4 py-3">MESHACK MANDELA</td>
+                <td class="px-4 py-3">Midfielder</td>
+                <td class="px-4 py-3 text-center text-2xl font-extrabold text-red-500 drop-shadow">11</td>
+              </tr>
+              <tr class="hover:bg-gradient-to-r hover:from-red-100 hover:to-red-300 transition-all font-semibold text-gray-900 text-lg">
+                <td class="px-4 py-3">ROBERT AMADI</td>
+                <td class="px-4 py-3">Forward</td>
+                <td class="px-4 py-3 text-center text-2xl font-extrabold text-red-500 drop-shadow">20</td>
+              </tr>
+              <tr class="hover:bg-gradient-to-r hover:from-red-100 hover:to-red-300 transition-all font-semibold text-gray-900 text-lg">
+                <td class="px-4 py-3">JOSEPH ONYANGO</td>
+                <td class="px-4 py-3">Defender</td>
+                <td class="px-4 py-3 text-center text-2xl font-extrabold text-red-500 drop-shadow">12</td>
+              </tr>
+              <tr class="hover:bg-gradient-to-r hover:from-red-100 hover:to-red-300 transition-all font-semibold text-gray-900 text-lg">
+                <td class="px-4 py-3">CYRIL MONDAY</td>
+                <td class="px-4 py-3">Midfielder</td>
+                <td class="px-4 py-3 text-center text-2xl font-extrabold text-red-500 drop-shadow">17</td>
+              </tr>
+              <tr class="hover:bg-gradient-to-r hover:from-red-100 hover:to-red-300 transition-all font-semibold text-gray-900 text-lg">
+                <td class="px-4 py-3">BRIAN MWANGI</td>
+                <td class="px-4 py-3">Defender</td>
+                <td class="px-4 py-3 text-center text-2xl font-extrabold text-red-500 drop-shadow">15</td>
+              </tr>
+              <tr class="hover:bg-gradient-to-r hover:from-red-100 hover:to-red-300 transition-all font-semibold text-gray-900 text-lg">
+                <td class="px-4 py-3">ABRAHAM KORIR</td>
+                <td class="px-4 py-3">Midfielder</td>
+                <td class="px-4 py-3 text-center text-2xl font-extrabold text-red-500 drop-shadow">30</td>
+              </tr>
+              <tr class="hover:bg-gradient-to-r hover:from-red-100 hover:to-red-300 transition-all font-semibold text-gray-900 text-lg">
+                <td class="px-4 py-3">IVAN ISADIA</td>
+                <td class="px-4 py-3">Midfielder</td>
+                <td class="px-4 py-3 text-center text-2xl font-extrabold text-red-500 drop-shadow">2</td>
+              </tr>
+              <tr class="hover:bg-gradient-to-r hover:from-red-100 hover:to-red-300 transition-all font-semibold text-gray-900 text-lg">
+                <td class="px-4 py-3">STEPHEN NGWARE</td>
+                <td class="px-4 py-3">Defender</td>
+                <td class="px-4 py-3 text-center text-2xl font-extrabold text-red-500 drop-shadow">7</td>
+              </tr>
+              <tr class="hover:bg-gradient-to-r hover:from-red-100 hover:to-red-300 transition-all font-semibold text-gray-900 text-lg">
+                <td class="px-4 py-3">CHARLES KIAMBUTHI</td>
+                <td class="px-4 py-3">Midfielder</td>
+                <td class="px-4 py-3 text-center text-2xl font-extrabold text-red-500 drop-shadow">33</td>
+              </tr>
+              <tr class="hover:bg-gradient-to-r hover:from-red-100 hover:to-red-300 transition-all font-semibold text-gray-900 text-lg">
+                <td class="px-4 py-3">MORRISON MBURU</td>
+                <td class="px-4 py-3">Defender</td>
+                <td class="px-4 py-3 text-center text-2xl font-extrabold text-red-500 drop-shadow">22</td>
+              </tr>
+              <tr class="hover:bg-gradient-to-r hover:from-red-100 hover:to-red-300 transition-all font-semibold text-gray-900 text-lg">
+                <td class="px-4 py-3">FREDRICK OUMA</td>
+                <td class="px-4 py-3">Defender</td>
+                <td class="px-4 py-3 text-center text-2xl font-extrabold text-red-500 drop-shadow">16</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- Tigers Table -->
+      <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl shadow-2xl border-4 border-orange-200 hover:scale-105 transition-transform duration-300 overflow-hidden">
+        <h3 class="text-2xl font-extrabold text-center py-5 bg-gradient-to-r from-orange-500 to-orange-400 text-white tracking-widest shadow">Tigers</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full text-lg">
+            <thead class="bg-orange-500 text-white">
+              <tr>
+                <th class="px-4 py-2 text-left font-semibold">Player</th>
+                <th class="px-4 py-2 text-left font-semibold">Position</th>
+                <th class="px-4 py-2 text-left font-semibold">Tshirt Number</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr class="hover:bg-gradient-to-r hover:from-orange-100 hover:to-orange-300 transition-all font-semibold text-gray-900 text-lg">
+                <td class="px-4 py-3 flex items-center space-x-2"><span class="inline-block w-2 h-2 bg-orange-500 rounded-full mr-2"></span>Allan Kasekwa</td>
+                <td class="px-4 py-3">Goalkeeper</td>
+                <td class="px-4 py-3 text-center text-2xl font-extrabold text-orange-500 drop-shadow">22</td>
+              </tr>
+                 <tr class="hover:bg-gradient-to-r hover:from-red-100 hover:to-red-300 transition-all font-semibold text-gray-900 text-lg">
+                <td class="px-4 py-3">TREVOUR KABAKA</td>
+                <td class="px-4 py-3">Defender</td>
+                <td class="px-4 py-3 text-center text-2xl font-extrabold text-red-500 drop-shadow">8</td>
+              </tr>
+              <tr class="hover:bg-gradient-to-r hover:from-red-100 hover:to-red-300 transition-all font-semibold text-gray-900 text-lg">
+                <td class="px-4 py-3">DUNCAN MURUNGA</td>
+                <td class="px-4 py-3">Midfielder</td>
+                <td class="px-4 py-3 text-center text-2xl font-extrabold text-red-500 drop-shadow">25</td>
+              </tr>
+                <tr class="hover:bg-gradient-to-r hover:from-red-100 hover:to-red-300 transition-all font-semibold text-gray-900 text-lg">
+                <td class="px-4 py-3">GILBERT LANGAT</td>
+                <td class="px-4 py-3">Midfielder</td>
+                <td class="px-4 py-3 text-center text-2xl font-extrabold text-red-500 drop-shadow">27</td>
+              </tr>
+              <tr class="hover:bg-gradient-to-r hover:from-orange-100 hover:to-orange-300 transition-all font-semibold text-gray-900 text-lg">
+                <td class="px-4 py-3 flex items-center space-x-2"><span class="inline-block w-2 h-2 bg-orange-500 rounded-full mr-2"></span>Paul Gumbe</td>
+                <td class="px-4 py-3">Defender</td>
+                <td class="px-4 py-3 text-center text-2xl font-extrabold text-orange-500 drop-shadow">31</td>
+              </tr>
+              <tr class="hover:bg-gradient-to-r hover:from-orange-100 hover:to-orange-300 transition-all font-semibold text-gray-900 text-lg">
+                <td class="px-4 py-3 flex items-center space-x-2"><span class="inline-block w-2 h-2 bg-orange-500 rounded-full mr-2"></span>Gordon Odwuor</td>
+                <td class="px-4 py-3">Defender</td>
+                <td class="px-4 py-3 text-center text-2xl font-extrabold text-orange-500 drop-shadow">16</td>
+              </tr>
+              <tr class="hover:bg-gradient-to-r hover:from-orange-100 hover:to-orange-300 transition-all font-semibold text-gray-900 text-lg">
+                <td class="px-4 py-3 flex items-center space-x-2"><span class="inline-block w-2 h-2 bg-orange-500 rounded-full mr-2"></span>Joseph Ombogo</td>
+                <td class="px-4 py-3">Midfielder</td>
+                <td class="px-4 py-3 text-center text-2xl font-extrabold text-orange-500 drop-shadow">4</td>
+              </tr>
+              <tr class="hover:bg-gradient-to-r hover:from-orange-100 hover:to-orange-300 transition-all font-semibold text-gray-900 text-lg">
+                <td class="px-4 py-3 flex items-center space-x-2"><span class="inline-block w-2 h-2 bg-orange-500 rounded-full mr-2"></span>Samuel Kariuki</td>
+                <td class="px-4 py-3">Forward</td>
+                <td class="px-4 py-3 text-center text-2xl font-extrabold text-orange-500 drop-shadow">9</td>
+              </tr>
+              <tr class="hover:bg-gradient-to-r hover:from-orange-100 hover:to-orange-300 transition-all font-semibold text-gray-900 text-lg">
+                <td class="px-4 py-3 flex items-center space-x-2"><span class="inline-block w-2 h-2 bg-orange-500 rounded-full mr-2"></span>James Simiyu</td>
+                <td class="px-4 py-3">Forward</td>
+                <td class="px-4 py-3 text-center text-2xl font-extrabold text-orange-500 drop-shadow">33</td>
+              </tr>
+              <tr class="hover:bg-gradient-to-r hover:from-orange-100 hover:to-orange-300 transition-all font-semibold text-gray-900 text-lg">
+                <td class="px-4 py-3 flex items-center space-x-2"><span class="inline-block w-2 h-2 bg-orange-500 rounded-full mr-2"></span>Ian Duncan Langat</td>
+                <td class="px-4 py-3">Forward</td>
+                <td class="px-4 py-3 text-center text-2xl font-extrabold text-orange-500 drop-shadow">10</td>
+              </tr>
+              <tr class="hover:bg-gradient-to-r hover:from-orange-100 hover:to-orange-300 transition-all font-semibold text-gray-900 text-lg">
+                <td class="px-4 py-3 flex items-center space-x-2"><span class="inline-block w-2 h-2 bg-orange-500 rounded-full mr-2"></span>Kanah Mbago</td>
+                <td class="px-4 py-3">Defender</td>
+                <td class="px-4 py-3 text-center text-2xl font-extrabold text-orange-500 drop-shadow">38</td>
+              </tr>
+              <tr class="hover:bg-gradient-to-r hover:from-orange-100 hover:to-orange-300 transition-all font-semibold text-gray-900 text-lg">
+                <td class="px-4 py-3 flex items-center space-x-2"><span class="inline-block w-2 h-2 bg-orange-500 rounded-full mr-2"></span>Abiud Nyukuri</td>
+                <td class="px-4 py-3">Defender</td>
+                <td class="px-4 py-3 text-center text-2xl font-extrabold text-orange-500 drop-shadow">5</td>
+              </tr>
+              <tr class="hover:bg-gradient-to-r hover:from-orange-100 hover:to-orange-300 transition-all font-semibold text-gray-900 text-lg">
+                <td class="px-4 py-3 flex items-center space-x-2"><span class="inline-block w-2 h-2 bg-orange-500 rounded-full mr-2"></span>Washington Otambo</td>
+                <td class="px-4 py-3">Forward</td>
+                <td class="px-4 py-3 text-center text-2xl font-extrabold text-orange-500 drop-shadow">13</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- Lions Table (detailed) -->
+      <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl shadow-2xl border-4 border-blue-200 hover:scale-105 transition-transform duration-300 overflow-hidden">
+        <h3 class="text-2xl font-extrabold text-center py-5 bg-gradient-to-r from-hockey-blue-600 to-hockey-blue-400 text-white tracking-widest shadow">Lions</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full text-lg">
+            <thead class="bg-hockey-blue-600 text-white">
+              <tr>
+                <th class="px-6 py-3 text-left font-bold tracking-wider uppercase">Name</th>
+                <th class="px-6 py-3 text-left font-bold tracking-wider uppercase">Position</th>
+                <th class="px-6 py-3 text-left font-bold tracking-wider uppercase">Tshirt Number</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-blue-100">
+              <tr class="hover:bg-blue-100/80 transition-colors group"><td class="px-6 py-3 font-semibold group-hover:text-blue-700">ANTHONY IGOTO</td><td class="px-6 py-3">Goalkeeper</td><td class="px-6 py-3">1</td></tr>
+              <tr class="hover:bg-blue-100/80 transition-colors group"><td class="px-6 py-3 font-semibold group-hover:text-blue-700">GILBERT MOMATA</td><td class="px-6 py-3">Defender</td><td class="px-6 py-3">5</td></tr>
+              <tr class="hover:bg-blue-100/80 transition-colors group"><td class="px-6 py-3 font-semibold group-hover:text-blue-700">CYRUS KANYI</td><td class="px-6 py-3">Coach</td><td class="px-6 py-3">-</td></tr>
+              <tr class="hover:bg-blue-100/80 transition-colors group"><td class="px-6 py-3 font-semibold group-hover:text-blue-700">MORDECAI OGADA</td><td class="px-6 py-3">Forward</td><td class="px-6 py-3">9</td></tr>
+              <tr class="hover:bg-blue-100/80 transition-colors group"><td class="px-6 py-3 font-semibold group-hover:text-blue-700">FREDRICK OMONDI</td><td class="px-6 py-3">Midfielder</td><td class="px-6 py-3">8</td></tr>
+              <tr class="hover:bg-blue-100/80 transition-colors group"><td class="px-6 py-3 font-semibold group-hover:text-blue-700">PATRICK NDUNG’U</td><td class="px-6 py-3">Defender</td><td class="px-6 py-3">6</td></tr>
+              <tr class="hover:bg-blue-100/80 transition-colors group"><td class="px-6 py-3 font-semibold group-hover:text-blue-700">MIRIAM WARUI</td><td class="px-6 py-3">Forward</td><td class="px-6 py-3">11</td></tr>
+              <tr class="hover:bg-blue-100/80 transition-colors group"><td class="px-6 py-3 font-semibold group-hover:text-blue-700">WILLIAM OKECH</td><td class="px-6 py-3">Midfielder</td><td class="px-6 py-3">7</td></tr>
+              <tr class="hover:bg-blue-100/80 transition-colors group"><td class="px-6 py-3 font-semibold group-hover:text-blue-700">CAROLINE MABWAY</td><td class="px-6 py-3">Defender</td><td class="px-6 py-3">3</td></tr>
+              <tr class="hover:bg-blue-100/80 transition-colors group"><td class="px-6 py-3 font-semibold group-hover:text-blue-700">MIKA MITOKO</td><td class="px-6 py-3">Forward</td><td class="px-6 py-3">10</td></tr>
+              <tr class="hover:bg-blue-100/80 transition-colors group"><td class="px-6 py-3 font-semibold group-hover:text-blue-700">NICHOLAS WAIGANJO</td><td class="px-6 py-3">Defender</td><td class="px-6 py-3">4</td></tr>
+              <tr class="hover:bg-blue-100/80 transition-colors group"><td class="px-6 py-3 font-semibold group-hover:text-blue-700">GEORGE DAVIS</td><td class="px-6 py-3">Midfielder</td><td class="px-6 py-3">12</td></tr>
+              <tr class="hover:bg-blue-100/80 transition-colors group"><td class="px-6 py-3 font-semibold group-hover:text-blue-700">PAUL MIHINGO</td><td class="px-6 py-3">Forward</td><td class="px-6 py-3">13</td></tr>
+              <tr class="hover:bg-blue-100/80 transition-colors group"><td class="px-6 py-3 font-semibold group-hover:text-blue-700">BERNARD WAWERU</td><td class="px-6 py-3">Defender</td><td class="px-6 py-3">14</td></tr>
+              <tr class="hover:bg-blue-100/80 transition-colors group"><td class="px-6 py-3 font-semibold group-hover:text-blue-700">AKWERI OYUNGU</td><td class="px-6 py-3">Midfielder</td><td class="px-6 py-3">15</td></tr>
+              <tr class="hover:bg-blue-100/80 transition-colors group"><td class="px-6 py-3 font-semibold group-hover:text-blue-700">JAFFERSON OMOLLO</td><td class="px-6 py-3">Forward</td><td class="px-6 py-3">16</td></tr>
+              <tr class="hover:bg-blue-100/80 transition-colors group"><td class="px-6 py-3 font-semibold group-hover:text-blue-700">TOBIAS OWUOR</td><td class="px-6 py-3">Defender</td><td class="px-6 py-3">17</td></tr>
+              <tr class="hover:bg-blue-100/80 transition-colors group"><td class="px-6 py-3 font-semibold group-hover:text-blue-700">EMILY MUHANDIA</td><td class="px-6 py-3">Midfielder</td><td class="px-6 py-3">18</td></tr>
+              <tr class="hover:bg-blue-100/80 transition-colors group"><td class="px-6 py-3 font-semibold group-hover:text-blue-700">MOLLYNE ATIENO</td><td class="px-6 py-3">Forward</td><td class="px-6 py-3">19</td></tr>
+              <tr class="hover:bg-blue-100/80 transition-colors group"><td class="px-6 py-3 font-semibold group-hover:text-blue-700">DAVID OMWAKA</td><td class="px-6 py-3">Defender</td><td class="px-6 py-3">20</td></tr>
+              <tr class="hover:bg-blue-100/80 transition-colors group"><td class="px-6 py-3 font-semibold group-hover:text-blue-700">NICHOLAS GULARIRE</td><td class="px-6 py-3">Midfielder</td><td class="px-6 py-3">21</td></tr>
+              <tr class="hover:bg-blue-100/80 transition-colors group"><td class="px-6 py-3 font-semibold group-hover:text-blue-700">WANGARI KARUA</td><td class="px-6 py-3">Forward</td><td class="px-6 py-3">22</td></tr>
+              <tr class="hover:bg-blue-100/80 transition-colors group"><td class="px-6 py-3 font-semibold group-hover:text-blue-700">EDWARD ODHIAMBO</td><td class="px-6 py-3">Defender</td><td class="px-6 py-3">23</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Events Section -->
+<section id="events" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <div class="text-hockey-green-600 font-semibold mb-4">UPCOMING EVENTS</div>
+      <h2 class="text-4xl lg:text-5xl font-display font-bold text-gray-900 mb-6">
+        Don't Miss the <span class="text-hockey-green-600">Action</span>
+      </h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        Join us for thrilling matches, training sessions, and community events that bring our hockey family together.
+      </p>
+    </div>
+    
+    <div class="grid lg:grid-cols-2 gap-8">
+      <!-- Featured Event -->
+      <div class="bg-gradient-to-br from-hockey-green-600 to-hockey-green-700 rounded-2xl p-8 text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -translate-y-20 translate-x-20"></div>
+        <div class="relative">
+          <div class="flex items-center space-x-4 mb-6">
+            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
+              <i class="fas fa-hockey-puck text-2xl text-yellow-300"></i>
+            </div>
+            <div>
+              <div class="text-green-100 text-sm font-medium">LEAGUE MATCH</div>
+              <div class="text-2xl font-bold">July 29, 2025</div>
+            </div>
+          </div>
+          <h3 class="text-3xl font-bold mb-4"> ParkRoad Badgers vs Kisumu Youngsters</h3>
+          <p class="text-green-100 mb-6 text-lg">
+            Don't miss this thrilling field hockey match! The game promises intense action, skillful play, and a vibrant crowd. Come support your team!
+          </p>
+          
+          <div class="grid grid-cols-2 gap-4 mb-6">
+            <div class="bg-white/10 rounded-lg p-3 text-center">
+              <div class="text-sm text-green-100">Venue</div>
+              <div class="font-semibold">JKUAT Grounds</div>
+            </div>
+            <div class="bg-white/10 rounded-lg p-3 text-center">
+              <div class="text-sm text-green-100">Time</div>
+              <div class="font-semibold">3:00 PM</div>
+            </div>
+          </div>
+          
+          <button class="bg-white text-hockey-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <i class="fas fa-ticket-alt mr-2"></i>
+            Get Tickets
+          </button>
+        </div>
+      </div>
+      
+      <!-- Event List -->
+      <div class="space-y-6">
+        <div class="bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow">
+          <div class="
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow">
+          <div class="flex items-start space-x-4">
+            <div class="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-child text-white"></i>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center justify-between mb-2">
+                <h4 class="font-semibold text-lg text-gray-900">Youth Camp</h4>
+                <span class="text-sm text-gray-500">August 15-20</span>
+              </div>
+              <p class="text-gray-600 mb-3">Summer hockey camp for young enthusiasts. Ages 8-16 welcome!</p>
+              <div class="flex items-center text-sm text-orange-500">
+                <i class="fas fa-map-marker-alt mr-1"></i>
+                <span>JKUAT Sports Complex</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow">
+          <div class="flex items-start space-x-4">
+            <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-trophy text-white"></i>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center justify-between mb-2">
+                <h4 class="font-semibold text-lg text-gray-900">Annual Awards Ceremony</h4>
+                <span class="text-sm text-gray-500">December 15</span>
+              </div>
+              <p class="text-gray-600 mb-3">Celebrating our players, coaches, and community supporters.</p>
+              <div class="flex items-center text-sm text-purple-500">
+                <i class="fas fa-users mr-1"></i>
+                <span>Members & Families</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-gray-900 text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16">
+      <div class="space-y-8">
+        <div class="space-y-4">
+          <div class="text-hockey-green-400 font-semibold">GET IN TOUCH</div>
+          <h2 class="text-4xl lg:text-5xl font-display font-bold">
+            Ready to Join Our <span class="text-hockey-green-400">Hockey Family?</span>
+          </h2>
+          <p class="text-lg text-gray-300">
+            Whether you're a seasoned player or just starting out, we'd love to hear from you. Contact us to learn more about training, matches, and membership opportunities.
+          </p>
+        </div>
+        
+        <div class="space-y-6">
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-hockey-green-600 rounded-lg flex items-center justify-center">
+              <i class="fas fa-envelope text-white text-2xl"></i>
+            </div>
+            <div>
+              <div class="font-medium">Email Us</div>
+              <a href="mailto:parkroad.hockey@gmail.com" class="text-hockey-green-400 hover:text-hockey-green-300">
+                parkroad.hockey@gmail.com
+              </a>
+            </div>
+          </div>
+          
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-hockey-green-600 rounded-lg flex items-center justify-center">
+              <i class="fas fa-globe text-white"></i>
+            </div>
+            <div>
+              <div class="font-medium">Visit Our Website</div>
+              <a href="https://www.parkroadhockey.org" class="text-hockey-green-400 hover:text-hockey-green-300">
+                www.parkroadhockey.org
+              </a>
+            </div>
+          </div>
+          
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-hockey-green-600 rounded-lg flex items-center justify-center">
+              <i class="fas fa-map-marker-alt text-white"></i>
+            </div>
+            <div>
+              <div class="font-medium">Home Ground</div>
+              <div class="text-gray-300">Jomo Kenyatta University of Agriculture & Technology (JKUAT)</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pt-8 border-t border-gray-700">
+          <div class="text-gray-300 mb-4">Follow us on social media:</div>
+          <div class="flex space-x-4">
+            <a href="https://www.facebook.com/parkroadhockey/about/" class="w-10 h-10 bg-gray-700 hover:bg-hockey-green-600 rounded-lg flex items-center justify-center transition-colors">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/parkroadhockey/" class="w-10 h-10 bg-gray-700 hover:bg-hockey-green-600 rounded-lg flex items-center justify-center transition-colors">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/parkroadhockey" class="w-10 h-10 bg-gray-700 hover:bg-hockey-green-600 rounded-lg flex items-center justify-center transition-colors">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Contact Form -->
+      <div class="bg-gray-800 rounded-2xl p-8">
+        <form class="space-y-6" id="contactForm" action="/contact" method="POST">
+          <div class="space-y-4">
+            <h3 class="text-2xl font-bold mb-6">Send us a message</h3>
+            
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
+              <input type="text" id="name" name="name" required 
+                     class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-hockey-green-500 focus:border-transparent"
+                     placeholder="Your full name">
+            </div>
+            
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
+              <input type="email" id="email" name="email" required 
+                     class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-hockey-green-500 focus:border-transparent"
+                     placeholder="your@email.com">
+            </div>
+            
+            <div>
+              <label for="interest" class="block text-sm font-medium text-gray-300 mb-2">I'm interested in</label>
+              <select id="interest" name="interest" 
+                      class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-hockey-green-500 focus:border-transparent">
+                <option value="">Select an option</option>
+                <option value="joining">Joining the club</option>
+                <option value="training">Training sessions</option>
+                <option value="sponsorship">Sponsorship</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message</label>
+              <textarea id="message" name="message" rows="4" required 
+                        class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-hockey-green-500 focus:border-transparent"
+                        placeholder="Tell us more about your interest..."></textarea>
+            </div>
+          </div>
+          
+          <input type="hidden" name="to_email" value="parkroad.hockey@gmail.com">
+          
+          <button type="submit" 
+                  class="w-full bg-hockey-green-600 hover:bg-hockey-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center">
+            <i class="fas fa-paper-plane mr-2"></i>
+            Send Message
+          </button>
+        </form>
+        
+        <div id="formMessage" class="mt-4 p-4 rounded-lg hidden"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 border-t border-gray-700 py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-4 gap-8">
+<!-- Footer -->
+<footer class="bg-gray-900 border-t border-gray-700 py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-4 gap-8">
+      <div class="space-y-4">
+        <div class="flex items-center space-x-3">
+          <img src="Main Logo.JPG" alt="ParkRoad Hockey Club Logo" class="h-14 object-contain">
+          <div class="font-display font-bold text-xl text-white">ParkRoad Hockey</div>
+        </div>
+        <p class="text-gray-400 text-sm">
+          Building champions and fostering community through the beautiful game of field hockey since 1994.
+        </p>
+      </div>
+      
+      <div>
+        <h4 class="font-semibold text-white mb-4">Quick Links</h4>
+        <div class="space-y-2">
+          <a href="#about" class="block text-gray-400 hover:text-hockey-green-400 text-sm">About Us</a>
+          <a href="#teams" class="block text-gray-400 hover:text-hockey-green-400 text-sm">Our Teams</a>
+          <a href="#players" class="block text-gray-400 hover:text-hockey-green-400 text-sm">Players</a>
+          <a href="#events" class="block text-gray-400 hover:text-hockey-green-400 text-sm">Events</a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="font-semibold text-white mb-4">Programs</h4>
+        <div class="space-y-2">
+          <a href="#" class="block text-gray-400 hover:text-hockey-green-400 text-sm">Youth Training</a>
+          <a href="#" class="block text-gray-400 hover:text-hockey-green-400 text-sm">Adult Leagues</a>
+          <a href="#" class="block text-gray-400 hover:text-hockey-green-400 text-sm">Coaching Clinics</a>
+          <a href="#" class="block text-gray-400 hover:text-hockey-green-400 text-sm">Summer Camps</a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="font-semibold text-white mb-4">Contact Info</h4>
+        <div class="space-y-2 text-sm text-gray-400">
+          <div>JKUAT Sports Complex</div>
+          <div>Nairobi, Kenya</div>
+          <div>parkroad.hockey@gmail.com</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
+      <p>&copy; 2025 ParkRoad Hockey Club. All rights reserved. | Building champions since 1994</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Mobile menu toggle
+document.getElementById('mobile-menu-button').addEventListener('click', function() {
+  const menu = document.getElementById('mobile-menu');
+  menu.classList.toggle('hidden');
+});
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+      document.getElementById('mobile-menu').classList.add('hidden');
+    }
+  });
+});
+
+// Contact form email automation using EmailJS
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+    .then(function() {
+      document.getElementById('formMessage').className = 'mt-4 p-4 rounded-lg bg-hockey-green-600 text-white';
+      document.getElementById('formMessage').textContent = "Thank you for your message! We'll get back to you soon.";
+      document.getElementById('formMessage').classList.remove('hidden');
+      document.getElementById('contactForm').reset();
+      setTimeout(() => {
+        document.getElementById('formMessage').classList.add('hidden');
+      }, 5000);
+    }, function(error) {
+      document.getElementById('formMessage').className = 'mt-4 p-4 rounded-lg bg-red-600 text-white';
+      document.getElementById('formMessage').textContent = "Oops! Something went wrong. Please try again later.";
+      document.getElementById('formMessage').classList.remove('hidden');
+    });
+});
+
+// Add some interactive animations on scroll
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('section').forEach(section => {
+  section.style.opacity = '0';
+  section.style.transform = 'translateY(20px)';
+  section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  observer.observe(section);
+});
+</script>
+
+</body>
+</html>
